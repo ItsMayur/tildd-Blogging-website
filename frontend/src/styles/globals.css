@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: black;
+  background-color: white rgb(var(--background-start-rgb));
+}
+
+/* NAVBAR */
+#LOGO {
+  height: 25px;
+}
+
+#Navbar {
+  box-shadow: rgba(113, 70, 157, 0.4) 0px 5px, rgba(113, 70, 157, 0.3) 0px 2px,
+    rgba(113, 70, 157, 0.2) 0px 1.5px, rgba(113, 70, 157, 0.1) 0px 2px,
+    rgba(113, 70, 157, 0.05) 0px 2px;
+}
+
+/* FOOTER */
+#Footer {
+  color: white;
+}
+#LOGOF {
+  height: 65px;
+}
+.h-line-footer {
+  height: 250px;
+  width: 1px;
+  background: #fff;
+}
+
+.featured-btns {
+  border: solid 2px #71469b;
+  padding: 2px 5px;
+  outline: solid 2px #71469b;
+  outline-offset: 0.05em;
+}
+
+/* BLOGS */
+.optionBtns {
+  width: fit-content;
+}
+.blogMini {
+  border: solid 1px #71469b;
+
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+/* ABOUT US */
+#AboutLogo {
+  width: 300px;
+}
+.teamCard {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
