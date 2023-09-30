@@ -9,9 +9,14 @@ const page = () => {
     <div>
       <Navbar />
       <main>
-        <div className="flex items-center h-screen justify-center">
+        <div className="flex items-center h-screen justify-center space-x-5">
           <div className="my-5 px-4 w-2/6 flex flex-col items-center ">
-            <img src="" alt="tildd" srcset="" id="AboutLogo" />
+            <img
+              src="/img/about-img.png"
+              alt="tildd"
+              srcset=""
+              id="AboutLogo"
+            />
           </div>
           <div className="w-3/6 text-sm space-y-3">
             <h2 className="text-3xl font-bold text-purple">
@@ -49,7 +54,6 @@ const page = () => {
             <h1>Team</h1>
           </div>
           <div className="flex w-3/6 flex-wrap">
-            <TeamCard />
             <TeamCard />
           </div>
         </div>

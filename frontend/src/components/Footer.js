@@ -12,7 +12,7 @@ export const Footer = () => {
             <img src="/img/LogoFooter.jpg" id="LOGOF" alt="" />
           </div>
           <div>
-            <p>Copyright © 2023 tildd.com</p>
+            <p>Copyright © 2023 tildd</p>
           </div>
         </div>
       </div>
@@ -20,63 +20,27 @@ export const Footer = () => {
       <div>
         <ul className="space-y-3">
           <li>
-            <a href="">tildd</a>
+            <a href="/">tildd</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="/blogs">Blogs</a>
           </li>
           <li>
-            <a href="">Blogs</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        {" "}
-        <ul className="space-y-3">
-          <li>
-            <a href="">Help</a>
-          </li>
-          <li>
-            <a href="">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="">Cookie Policy</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul className="space-y-3">
-          <li>
-            <a href="">tildd</a>
-          </li>
-          <li>
-            <a href="">tildd</a>
-          </li>
-          <li>
-            <a href="">tildd</a>
-          </li>
-          <li>
-            <a href="">About</a>
-          </li>
-          <li>
-            <a href="">Blogs</a>
+            <a href="/about">About</a>
           </li>
         </ul>
       </div>
       <div>
         {" "}
         <ul className="space-y-3">
+          {/* <li>
+            <a href="/help">Help</a>
+          </li> */}
           <li>
-            <a href="">Help</a>
+            <a href="/privacy-policy">Privacy Policy</a>
           </li>
           <li>
-            <a href="">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="">Cookie Policy</a>
-          </li>
-          <li>
-            <a href="">Cookie Policy</a>
+            <a href="/cookie-policy">Cookie Policy</a>
           </li>
         </ul>
       </div>

@@ -13,25 +13,26 @@ export const Navbar = () => {
             <li>
               <Link href="/">Home</Link>
             </li>
-            <li>
+            {/* <li>
               <a href="/learn">Learn</a>
-            </li>
+            </li> */}
             <li>
               <Link href="/blogs">Blogs</Link>
             </li>
             <li>
               <a href="/about">About</a>
             </li>
-            <li>
+            {/* <li>
               <a href="/work-with-us">Work with us</a>
-            </li>
+            </li> */}
           </ul>
         </div>
+
         <div className="flex mx-5">
-          <ul className="flex space-x-5 items-center">
+          {/* <ul className="flex space-x-5 items-center">
             <li className="featured-btns text-purple">SIGN IN</li>
             <li className="featured-btns text-purple">SIGN UP</li>
-          </ul>
+          </ul> */}
         </div>
       </div>
       <div>{/* TO CREATE CATOGORIES */}</div>

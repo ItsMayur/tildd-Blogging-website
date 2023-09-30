@@ -9,8 +9,10 @@ const ContactCard = () => {
             <h2 className="text-5xl">Contact</h2>
           </div>
           <div>
-            <p>themailoftildd@gmail.com</p>
-            <p>+91 8557095867</p>
+            <ul className="font-bold space-y-2 list-disc pl-5">
+              <li>tilddforme@gmail.com</li>
+              <li>+91 8557095867</li>
+            </ul>
           </div>
         </div>
         <div>

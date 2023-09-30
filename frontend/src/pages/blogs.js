@@ -15,32 +15,21 @@ const page = () => {
           <div className="flex justify-center">
             <ul className="flex  space-x-5 w-4/6 flex-wrap">
               <li className="flex optionBtns px-3 py-1 rounded-md text-white bg-purple">
-                Catagory
+                Programming
               </li>
               <li className="flex optionBtns px-3 py-1 rounded-md text-white bg-purple">
-                Catagory
-              </li>
-              <li className="flex optionBtns px-3 py-1 rounded-md text-white bg-purple">
-                Catagory
-              </li>
-              <li className="flex optionBtns px-3 py-1 rounded-md text-white bg-purple">
-                Catagory
-              </li>
-              <li className="flex optionBtns px-3 py-1 rounded-md text-white bg-purple">
-                Catagory
-              </li>
-              <li className="flex optionBtns px-3 py-1 rounded-md text-white bg-purple">
-                Catagory
+                Developer Updates
               </li>
             </ul>
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <BlogMini />
-          <BlogMini />
-          <BlogMini />
-          <BlogMini />
-          <BlogMini />
+          <BlogMini
+            title="Why choose Next.js over React.js? Elevate your web development with blazing-fast performance and SEO-friendly features!"
+            discription="Next.js is a popular open-source JavaScript framework built on top of React.js. It's designed to simplify the development of server-rendered React applications and provides a set of tools ..."
+            tags={["Next JS", "React JS"]}
+            url="/blogs/Next.js-vs-react.js"
+          />
         </div>
       </main>
       <Footer />
