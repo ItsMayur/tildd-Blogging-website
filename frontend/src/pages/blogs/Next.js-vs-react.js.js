@@ -11,8 +11,8 @@ export default function page() {
           <Navbar />
         </header>
         <main>
-          <div className="flex justify-evenly my-16">
-            <div id="BlogPage" className="w-3/6">
+          <div className="flex justify-evenly my-16 max-md:flex-col-reverse max-md:items-center">
+            <div id="BlogPage" className="w-3/6 max-md:w-screen max-md:px-10">
               <div id="BlogBody">
                 <article id="BlogContent">
                   <header id="BlogTitle">
@@ -123,18 +123,18 @@ export default function page() {
                           face="arial"
                         >
                           Next.js is a popular open-source JavaScript framework
-                          built on top of React.js. It's designed to simplify
-                          the development of server-rendered React applications
-                          and provides a set of tools and conventions for
-                          building modern web applications. Next.js offers
-                          features like server-side rendering (SSR), automatic
-                          code splitting, and routing out of the box, making it
-                          ideal for building SEO-friendly, high-performance, and
-                          production-ready applications. It also supports
-                          features like static site generation (SSG) and server
-                          less deployment, giving developers flexibility in how
-                          they optimize and deploy their applications for
-                          various use cases.
+                          built on top of React.js. It&apos;s designed to
+                          simplify the development of server-rendered React
+                          applications and provides a set of tools and
+                          conventions for building modern web applications.
+                          Next.js offers features like server-side rendering
+                          (SSR), automatic code splitting, and routing out of
+                          the box, making it ideal for building SEO-friendly,
+                          high-performance, and production-ready applications.
+                          It also supports features like static site generation
+                          (SSG) and server less deployment, giving developers
+                          flexibility in how they optimize and deploy their
+                          applications for various use cases.
                         </font>
                       </p>
                       <h1
@@ -182,9 +182,10 @@ export default function page() {
                           for web applications because it significantly enhances
                           user experience. SSR means that web pages are
                           generated on the server and sent as fully rendered
-                          HTML to the client's browser. This approach is crucial
-                          because it ensures faster initial page loading, which
-                          is vital for retaining user engagement.&nbsp;
+                          HTML to the client&apos;s browser. This approach is
+                          crucial because it ensures faster initial page
+                          loading, which is vital for retaining user
+                          engagement.&nbsp;
                         </font>
                       </div>
                       <div>
@@ -203,18 +204,18 @@ export default function page() {
                           face="arial"
                         >
                           Next.js makes SSR incredibly accessible by offering it
-                          out of the box. With Next.js, developers don't need to
-                          set up complex configurations; it's seamlessly
-                          integrated into the framework. For example, when a
-                          search engine crawls a website built with Next.js, it
-                          receives fully rendered HTML content, significantly
-                          improving SEO. Additionally, users experience faster
-                          page loading times, as the server provides the initial
-                          HTML content, allowing for quicker rendering,
-                          particularly on slower connections or less powerful
-                          devices. This combination of benefits makes Next.js an
-                          excellent choice for building web applications that
-                          prioritize performance and SEO.
+                          out of the box. With Next.js, developers don&apos;t
+                          need to set up complex configurations; it&apos;s
+                          seamlessly integrated into the framework. For example,
+                          when a search engine crawls a website built with
+                          Next.js, it receives fully rendered HTML content,
+                          significantly improving SEO. Additionally, users
+                          experience faster page loading times, as the server
+                          provides the initial HTML content, allowing for
+                          quicker rendering, particularly on slower connections
+                          or less powerful devices. This combination of benefits
+                          makes Next.js an excellent choice for building web
+                          applications that prioritize performance and SEO.
                         </font>
                       </div>
                       <div>
@@ -241,13 +242,15 @@ export default function page() {
                           additional libraries for routing, Next.js provides a
                           straightforward way to handle page navigation. For
                           instance, with Next.js, you can create a new page in
-                          the "pages" directory, and it automatically becomes a
-                          route accessible via a URL. Here's an example: if you
-                          create a file named "about.js" in the "pages" folder,
-                          it can be accessed at "yourwebsite.com/about." This
-                          seamless approach to routing makes Next.js a
-                          user-friendly choice for building dynamic and
-                          SEO-friendly web applications.
+                          the &quot;pages&quot; directory, and it automatically
+                          becomes a route accessible via a URL. Here&apos;s an
+                          example: if you create a file named
+                          &quot;about.js&quot; in the &quot;pages&quot; folder,
+                          it can be accessed at
+                          &quot;yourwebsite.com/about.&quot; This seamless
+                          approach to routing makes Next.js a user-friendly
+                          choice for building dynamic and SEO-friendly web
+                          applications.
                         </div>
                         <div>
                           <h3
@@ -276,9 +279,9 @@ export default function page() {
                             handles form submissions securely. Users submit
                             their data, and Next.js processes it in the
                             background, making your site faster and more
-                            responsive. It's a win-win for both developers and
-                            users, streamlining the creation of dynamic, server
-                            less features for your web applications.
+                            responsive. It&apos;s a win-win for both developers
+                            and users, streamlining the creation of dynamic,
+                            server less features for your web applications.
                           </div>
                           <div>
                             <h3>
@@ -303,7 +306,7 @@ export default function page() {
                                   approach to project setup. Unlike React.js,
                                   which often involves complex configuration and
                                   build tools, Next.js requires minimal setup to
-                                  get started. Here's a simple step-by-step
+                                  get started. Here&apos;s a simple step-by-step
                                   guide:&nbsp;
                                 </div>
                                 <div>
@@ -363,8 +366,8 @@ export default function page() {
                                   <br />
                                 </div>
                                 <div>
-                                  With these straightforward steps, you'll have
-                                  a basic Next.js project up and running,
+                                  With these straightforward steps, you&apos;ll
+                                  have a basic Next.js project up and running,
                                   allowing you to focus on building your
                                   application rather than spending time on
                                   complex configurations, making it an excellent
@@ -396,16 +399,17 @@ export default function page() {
                               Next.js is your performance booster in web
                               development. It excels by automatically splitting
                               JavaScript bundles, ensuring that only the
-                              necessary code is sent to the user's device. This
-                              reduces loading times and enhances the overall
-                              user experience. Moreover, Next.js goes the extra
-                              mile by prefetching data, anticipating what the
-                              user might need next, further minimizing delays.
-                              Real-world examples and benchmark data demonstrate
-                              Next.js' advantages in delivering lightning-fast,
-                              efficient web applications. Harness the power of
-                              Next.js to keep your users engaged and delighted
-                              with a speedy, responsive website.
+                              necessary code is sent to the user&apos;s device.
+                              This reduces loading times and enhances the
+                              overall user experience. Moreover, Next.js goes
+                              the extra mile by prefetching data, anticipating
+                              what the user might need next, further minimizing
+                              delays. Real-world examples and benchmark data
+                              demonstrate Next.js&apos; advantages in delivering
+                              lightning-fast, efficient web applications.
+                              Harness the power of Next.js to keep your users
+                              engaged and delighted with a speedy, responsive
+                              website.
                             </font>
                           </div>
                           <div>
@@ -434,9 +438,9 @@ export default function page() {
                               developers a robust toolkit for building modern
                               web applications. What sets it apart is its strong
                               and engaged community, ensuring frequent updates,
-                              stability, and innovation. Whether you're a
-                              beginner or an experienced developer, you'll find
-                              ample resources and support in the Next.js
+                              stability, and innovation. Whether you&apos;re a
+                              beginner or an experienced developer, you&apos;ll
+                              find ample resources and support in the Next.js
                               community to help you on your journey. Check out
                               the official Next.js website and forums for
                               valuable resources and connect with fellow
@@ -477,14 +481,15 @@ export default function page() {
                               simplifies navigation, while API routes make data
                               fetching a breeze. Next.js is user-friendly and
                               widely supported by a vibrant community. When
-                              deciding between Next.js and React.js, it's
-                              crucial to consider your project's unique needs.
-                              For many, Next.js is the answer, providing robust
-                              solutions for various use cases. We encourage you
-                              to explore Next.js further and make informed
-                              decisions based on your project requirements.
-                              Discover the possibilities and unlock the full
-                              potential of your web applications with Next.js!
+                              deciding between Next.js and React.js, it&apos;s
+                              crucial to consider your project&apos;s unique
+                              needs. For many, Next.js is the answer, providing
+                              robust solutions for various use cases. We
+                              encourage you to explore Next.js further and make
+                              informed decisions based on your project
+                              requirements. Discover the possibilities and
+                              unlock the full potential of your web applications
+                              with Next.js!
                             </font>
                           </div>
                         </div>
@@ -514,7 +519,7 @@ export default function page() {
                 </div>
               </div>
             </div>
-            <div id="TableOfContent" className="w-2/6">
+            <div id="TableOfContent" className="w-2/6 max-md:w-11/12">
               <div className=" px-10 py-10 rounded-2xl border-purple border-2 space-y-2 text-purple">
                 <div>
                   <h2 className="text-2xl ">Table of content</h2>

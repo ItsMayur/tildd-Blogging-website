@@ -16,8 +16,9 @@ export default function Home() {
         <section>
           <h2 className="text-3xl">1. Introduction</h2>
           <p>
-            This Cookie Policy explains how Tildd ("we," "us," or "our") uses
-            cookies and similar technologies when you visit our website.
+            This Cookie Policy explains how Tildd (&quot;we,&quot;
+            &quot;us,&quot; or &quot;our&quot;) uses cookies and similar
+            technologies when you visit our website.
           </p>
         </section>
 
@@ -37,7 +38,7 @@ export default function Home() {
           <ul className="list-disc pl-10">
             <li>To provide essential functionality on our website.</li>
             <li>
-              To analyze and improve our website's performance and user
+              To analyze and improve our website&apos;s performance and user
               experience.
             </li>
             <li>

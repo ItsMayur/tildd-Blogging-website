@@ -1,20 +1,26 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 export const BlogMini = (props) => {
-  const Tags = props.tags || ["NO TAGS"];
+  const [Tags, setTags] = useState();
   console.log(Tags);
-  const iteratedTags = Tags.map((tag) => {
-    return <li>{tag}</li>;
-  });
-
+  const iteratedTags = () => {
+    setTags(props.tags);
+    if (Tags) {
+      Tags.map((tag, key) => {
+        return <li key={key}>{tag}</li>;
+      });
+    } else {
+      return <li>NO TAGS</li>;
+    }
+  };
   return (
     <Link
-      className="w-4/6 w-4/5 h-48 my-5 space-y-2 flex justify-center flex-col px-10  rounded-xl blogMini"
+      className="w-5/6  max-md:w-11/12 h-48 max-md:h-80 my-5 space-y-2 max-sm:h-11/12 max-sm:px-5 max-sm:rounded-none max-sm:w-screen flex justify-center flex-col px-10  rounded-xl blogMini"
       href={props.url}
     >
       <div>
-        <h2 className="text-xl font-bold ">{props.title}</h2>
+        <h2 className="text-lg font-bold ">{props.title}</h2>
       </div>
       <div>
         <p className="">{props.discription}</p>

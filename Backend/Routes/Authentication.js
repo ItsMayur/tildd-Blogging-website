@@ -1,21 +1,57 @@
 const express = require("express");
 const User = require("./../Models/User");
-
+var session = require("express-session");
+const nodemailer = require("nodemailer");
+const { getLogger } = require("nodemailer/lib/shared");
 var router = express.Router();
+
+function randomIntFromInterval(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "tilddforme@gmail.com",
+    pass: "ixby wlxu ecaq njts",
+    // To be added to env file
+  },
+});
 
 //Create a user
 router.post("/user", function (req, res) {
   //Create User Object
+  console.log(req.body);
   const user = new User({
-    userid: req.body.userid,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    firstName: req.body.firstname,
+    lastName: req.body.lastname,
+    email: req.body.email,
+    verificationCode: randomIntFromInterval(1000, 9999),
+    password: req.body.password,
   });
   //Save in DB
   user
-    .save()
+    .save(user)
     .then((data) => {
-      res.send("Successfully added user" + data.firstName);
+      const user_id = data.id;
+      // req.session.id = user_id;
+
+      const mailOptions = {
+        from: "tilddforme@gmail.com",
+        to: data.email,
+        subject: "OTP FOR TILDD",
+        text: data.verificationCode,
+      };
+
+      transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log(error);
+        } else {
+        }
+      });
+      res.status(200).send({ message: "SUCCESS" });
     })
     .catch((err) => {
       res.status(500).send({ message: `Error creating user ${err.message}` });
@@ -23,15 +59,17 @@ router.post("/user", function (req, res) {
 });
 
 //Find a user
-router.get("/user/:id", function (req, res) {
-  User.find({ userid: req.params.id })
+router.post("/userLogin", function (req, res) {
+  User.find({ email: req.body.email })
     .then((user) => {
       if (!user) {
         return res.status(404).send({
           message: "User not found with id " + req.params.userid,
         });
       }
-      res.send(user);
+      if (req.body.password == user[0].password) {
+        res.send({ message: "SUCCESS" }).status(200);
+      }
     })
     .catch((err) => {
       return res.status(500).send({

@@ -9,16 +9,17 @@ const page = () => {
     <div>
       <Navbar />
       <main>
-        <div className="flex items-center h-screen justify-center space-x-5">
-          <div className="my-5 px-4 w-2/6 flex flex-col items-center ">
+        <div className="flex items-center max-md:h-auto py-10 px-2 justify-center space-x-5 max-md:flex-col">
+          <div className="my-5 px-4 w-2/6 max-md:w-screen flex flex-col items-center ">
             <img
               src="/img/about-img.png"
               alt="tildd"
               srcset=""
               id="AboutLogo"
+              className=""
             />
           </div>
-          <div className="w-3/6 text-sm space-y-3">
+          <div className="w-3/6 text-sm space-y-3 max-md:w-screen ">
             <h2 className="text-3xl font-bold text-purple">
               Enabling Dreams, Fueling Ambitions
             </h2>{" "}
@@ -31,29 +32,29 @@ const page = () => {
               electronics, robotics, and coding. With a passion for education
               and a commitment to excellence, Tildd offers a dynamic platform
               that brings these exciting fields to your fingertips. Whether
-              you're a curious beginner or an aspiring expert, our comprehensive
-              courses, expert instructors, and hands-on projects cater to
-              learners of all levels. Discover the fascinating world of
+              you&apos;re a curious beginner or an aspiring expert, our
+              comprehensive courses, expert instructors, and hands-on projects
+              cater to learners of all levels. Discover the fascinating world of
               electronics, where circuits come to life and ideas turn into
               reality. Dive into robotics, where creativity and technology unite
               to build the robots of tomorrow. Explore the art of coding, where
-              you'll write the language of the future. At Tildd, we don't just
-              provide education; we nurture curiosity, foster innovation, and
-              ignite a lifelong love for learning. Join our vibrant community of
-              learners, and together, let's embark on a journey of discovery,
-              growth, and achievement. Your dreams, our guidance - let's learn,
-              create, and innovate with Tildd. Join us today and start your
-              educational adventure with Tildd - where knowledge becomes your
-              superpower.
+              you&apos;ll write the language of the future. At Tildd, we
+              don&apos;t just provide education; we nurture curiosity, foster
+              innovation, and ignite a lifelong love for learning. Join our
+              vibrant community of learners, and together, let&apos;s embark on
+              a journey of discovery, growth, and achievement. Your dreams, our
+              guidance - let&apos;s learn, create, and innovate with Tildd. Join
+              us today and start your educational adventure with Tildd - where
+              knowledge becomes your superpower.
             </p>
           </div>
         </div>
-        <div className="h-screen w-screen bg-purple flex justify-evenly items-center">
+        <div className="h-auto w-screen bg-purple flex justify-evenly  items-center max-md:py-5 max-md:flex-col">
           <div className="text-white text-5xl">
             <h1>Meet The</h1>
             <h1>Team</h1>
           </div>
-          <div className="flex w-3/6 flex-wrap">
+          <div className="flex w-3/6 flex-wrap max-md:w-screen justify-center">
             <TeamCard />
           </div>
         </div>

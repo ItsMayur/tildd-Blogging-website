@@ -16,10 +16,10 @@ export default function Home() {
         <div className="space-y-10">
           <p>
             Your privacy is important to us. This Privacy Policy explains how
-            Tildd ("we," "us," or "our") collects, uses, and protects your
-            personal information when you use our services. By accessing or
-            using our services, you consent to the practices described in this
-            Privacy Policy.
+            Tildd (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects,
+            uses, and protects your personal information when you use our
+            services. By accessing or using our services, you consent to the
+            practices described in this Privacy Policy.
           </p>
           <div>
             <h2 className="text-3xl">1. Information We Collect</h2>

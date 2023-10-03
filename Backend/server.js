@@ -2,10 +2,24 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Authentication = require("./Routes/Authentication");
+const Blogs = require("./Routes/Blogs");
 const PORT = 5000;
+var session = require("express-session");
 
 //create the express app
 const app = express();
+const cors = require("cors");
+
+app.use(cors());
+
+app.use(
+  session({
+    secret: "keyboard cat",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true },
+  })
+);
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -27,6 +41,7 @@ mongoose
 
 //use the API controller
 app.use(Authentication);
+app.use(Blogs);
 app.listen(PORT, () => {
   console.log("Port Running from " + PORT);
 });

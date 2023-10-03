@@ -3,7 +3,7 @@ import React from "react";
 
 const TeamCard = () => {
   return (
-    <div className="bg-white w-72 h-96 px-10 py-2 m-2 teamCard">
+    <div className="bg-white w-72 h-96 px-10 py-2 m-2  teamCard">
       <div className="my-2 flex w-100 justify-center">
         <img
           src="/img/Founder.png"
