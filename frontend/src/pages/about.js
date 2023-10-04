@@ -3,6 +3,7 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import TeamCard from "../components/TeamCard";
 import ContactCard from "../components/ContactCard";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -10,16 +11,18 @@ const page = () => {
       <Navbar />
       <main>
         <div className="flex items-center max-md:h-auto py-10 px-2 justify-center space-x-5 max-md:flex-col">
-          <div className="my-5 px-4 w-2/6 max-md:w-screen flex flex-col items-center ">
-            <img
+          <div className="my-5 px-4 max-md:w-screen flex flex-col items-center ">
+            <Image
               src="/img/about-img.png"
               alt="tildd"
               srcset=""
               id="AboutLogo"
               className=""
+              width="500"
+              height="500"
             />
           </div>
-          <div className="w-3/6 text-sm space-y-3 max-md:w-screen ">
+          <div className="w-3/6 text-sm space-y-3 max-md:w-11/12 ">
             <h2 className="text-3xl font-bold text-purple">
               Enabling Dreams, Fueling Ambitions
             </h2>{" "}

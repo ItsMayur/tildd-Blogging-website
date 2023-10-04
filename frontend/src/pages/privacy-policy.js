@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,10 +17,11 @@ export default function Home() {
         <div className="space-y-10">
           <p>
             Your privacy is important to us. This Privacy Policy explains how
-            Tildd (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects,
-            uses, and protects your personal information when you use our
-            services. By accessing or using our services, you consent to the
-            practices described in this Privacy Policy.
+            <Link href="/"> tildd</Link> (&quot;we,&quot; &quot;us,&quot; or
+            &quot;our&quot;) collects, uses, and protects your personal
+            information when you use our services. By accessing or using our
+            services, you consent to the practices described in this Privacy
+            Policy.
           </p>
           <div>
             <h2 className="text-3xl">1. Information We Collect</h2>
@@ -116,7 +118,10 @@ export default function Home() {
             <h2 className="text-3xl">7. Contact Us</h2>
             <p>
               If you have any questions or concerns about this Privacy Policy,
-              please contact us at <strong>tilddforme@gmail.com</strong>
+              please contact us at{" "}
+              <Link href="mailto:tilddforme@gmail.com">
+                <strong>tilddforme@gmail.com</strong>
+              </Link>
             </p>
             <p>Last updated: Sep 30,2023</p>
           </div>

@@ -10,11 +10,15 @@ var session = require("express-session");
 const app = express();
 const cors = require("cors");
 
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "http://www.tildd.me", "http://tildd.me"],
-  })
-);
+const corsOpts = {
+    origin: '*',
+    credentials: true,
+    methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
+    allowedHeaders: ['Content-Type'],
+    exposedHeaders: ['Content-Type']
+};
+
+app.use(cors(corsOpts));
 
 app.use(
   session({
@@ -32,8 +36,8 @@ mongoose.Promise = global.Promise;
 
 // Connecting to the database
 mongoose
-  // .connect("mongodb+srv://tildd:tilddforme@tildd.l38tszj.mongodb.net/", {
-  .connect("mongodb://127.0.0.1:27017/tildd", {
+  .connect("mongodb+srv://tildd:tilddforme@tildd.l38tszj.mongodb.net/", {
+    // .connect("mongodb://127.0.0.1:27017/tildd", {
     useNewUrlParser: true,
   })
   .then(() => {

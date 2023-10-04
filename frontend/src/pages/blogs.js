@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { BlogMini } from "../components/BlogMini";
 import { Footer } from "../components/Footer";
@@ -6,22 +6,23 @@ import { Footer } from "../components/Footer";
 const Page = () => {
   const [blogs, setBlogs] = useState([""]);
   const searchPost = (e) => {};
+  const fetchBlogs = () => {
+    fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "/allBlogs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        search: "",
+      }),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        setBlogs(result);
+      });
+  };
 
-  fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "/allBlogs", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      search: "",
-    }),
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      console.log(blogs);
-      setBlogs(result);
-    });
-
+  useEffect(fetchBlogs, []);
   return (
     <div>
       <Navbar />
@@ -36,9 +37,6 @@ const Page = () => {
             <ul className="flex space-x-2 text-sm max-md:flex max-md:overflow-x-auto w-5/6 flex-wrap max-md:overflow-auto max-md:w-screen max-md:ml-2">
               <li className="flex optionBtns px-3 py-1 rounded-md text-white bg-purple">
                 Programming
-              </li>
-              <li className="flex optionBtns px-3 py-1 rounded-md text-white bg-purple">
-                Developer Updates
               </li>
               <li className="flex optionBtns px-3 py-1 rounded-md text-white bg-purple">
                 Developer Updates

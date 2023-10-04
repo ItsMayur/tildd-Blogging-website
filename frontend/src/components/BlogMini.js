@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 export const BlogMini = (props) => {
   const [Tags, setTags] = useState();
-  console.log(Tags);
   const iteratedTags = () => {
     setTags(props.tags);
     if (Tags) {

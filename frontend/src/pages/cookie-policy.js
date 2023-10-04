@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,9 +17,9 @@ export default function Home() {
         <section>
           <h2 className="text-3xl">1. Introduction</h2>
           <p>
-            This Cookie Policy explains how Tildd (&quot;we,&quot;
-            &quot;us,&quot; or &quot;our&quot;) uses cookies and similar
-            technologies when you visit our website.
+            This Cookie Policy explains how <Link href="/">tildd</Link>{" "}
+            (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) uses cookies
+            and similar technologies when you visit our website.
           </p>
         </section>
 
@@ -86,13 +87,18 @@ export default function Home() {
             If you have any questions or concerns about our Cookie Policy or
             data privacy practices, please contact us at{" "}
             <strong>
-              <a href="mailto:tilddforme@gmail.com">tilddforme@gmail.com</a>.
+              <Link href="mailto:tilddforme@gmail.com">
+                tilddforme@gmail.com
+              </Link>
+              .
             </strong>
           </p>
         </section>
 
         <footer>
-          <p>This Cookie Policy was last updated on Sep 30,2023.</p>
+          <p>
+            This Cookie Policy was last updated on <strong>Sep 30,2023</strong>
+          </p>
         </footer>
       </main>
       <footer>

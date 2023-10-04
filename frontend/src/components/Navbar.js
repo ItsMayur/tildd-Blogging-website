@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -13,7 +14,14 @@ export const Navbar = () => {
     <div>
       <div className="flex justify-between itmes-center py-5" id="Navbar">
         <div className="mx-5 ">
-          <img src="/img/Logo.png" alt="tildd" srcset="" id="LOGO" />
+          <Image
+            src="/img/Logo.png"
+            alt="tildd"
+            srcset=""
+            id="LOGO"
+            width={60}
+            height={50}
+          />
         </div>
         <div className="flex">
           <ul className="flex space-x-10 items-center max-md:hidden ">

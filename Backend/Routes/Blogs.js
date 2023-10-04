@@ -28,7 +28,7 @@ router.post("/blogSearch", async (req, res) => {
   if (search === "") {
     res.status(200).json([{}]);
   } else {
-    const Blog = await Post.find({ title: new RegExp(search, "i") });
+    const Blog = await Post.find({ title: new RegExp(String(search), "i") });
     if (!Blog) {
       return res.status(400).json({ error: "enter proper search" });
     }
