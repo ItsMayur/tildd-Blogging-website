@@ -5,8 +5,10 @@ import { Footer } from "../components/Footer";
 import Head from "next/head";
 
 const Page = () => {
+  // <---CONSTANTS USED IN PAGE--->
   const [blogs, setBlogs] = useState([""]);
-  const searchPost = (e) => {};
+
+  // <---FETCH BLOGS FUNCTION--->
   const fetchBlogs = () => {
     fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "/allBlogs", {
       method: "POST",

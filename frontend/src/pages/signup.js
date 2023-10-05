@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 export default function Signup(props) {
+  // <---CONSTANTS USED IN PAGE--->
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [verificaionEmail, setVerificationEmail] = useState("");
@@ -11,6 +12,8 @@ export default function Signup(props) {
   const [firstname, setfirstName] = useState("");
   const [lastname, setlastName] = useState("");
   const [verificaion, setVerification] = useState("");
+
+  // <---SUBMIT BUTTON FUNCTION--->
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "/user", {
@@ -38,6 +41,7 @@ export default function Signup(props) {
         }
       });
   };
+  // <---OTP VERIFICATION BUTTON--->
   const handleSubmitVerification = (e) => {
     e.preventDefault();
     fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "/otpLogin", {
@@ -66,7 +70,6 @@ export default function Signup(props) {
       <Head>
         <title>Register</title>
       </Head>
-
       <div className="h-auto space-y-5 bg-purple p-10 rounded-3xl">
         <h2 className="text-5xl text-white">Register</h2>
         <form

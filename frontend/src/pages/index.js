@@ -8,9 +8,10 @@ import Image from "next/image";
 import Head from "next/head";
 
 export default function Home() {
+  // <---CONSTANTS USED IN PAGE--->
   const [blogs, setBlogs] = useState([""]);
-  const searchPost = (e) => {};
 
+  // <---SEARCH SUBMIT BUTTON--->
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     const search = e.target.search.value;

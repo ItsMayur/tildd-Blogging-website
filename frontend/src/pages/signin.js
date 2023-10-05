@@ -4,11 +4,14 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 export default function Login(props) {
+  // <---CONSTANTS USED IN PAGE--->
   const [verificaionEmail, setVerificationEmail] = useState("");
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [verificaion, setVerification] = useState("");
+
+  // <---LOGIN BUTTON--->
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "/userLogin", {
@@ -36,6 +39,8 @@ export default function Login(props) {
         }
       });
   };
+
+  // <---OTP VERIFICATION BUTTON--->
   const handleSubmitVerification = (e) => {
     e.preventDefault();
     fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "/otpLogin", {

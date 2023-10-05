@@ -1,3 +1,4 @@
+// <---IMPORTING REQUIRED DEPENDENCIES--->
 const express = require("express");
 const User = require("./../Models/User");
 var session = require("express-session");
@@ -5,12 +6,14 @@ const nodemailer = require("nodemailer");
 const { getLogger } = require("nodemailer/lib/shared");
 var router = express.Router();
 
+// // <---FUNCTION TO CREATE RANDOM OTP--->
 function randomIntFromInterval(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// <---NODE MAILER CONFIGURATION--->
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -20,9 +23,9 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-//Create a user
+// <---ROUTE TO CREATE NEW USER IN DATABASE--->
 router.post("/user", function (req, res) {
-  //Create User Object
+  // // <---CREATING A USER--->
   const user = new User({
     firstName: req.body.firstname,
     lastName: req.body.lastname,
@@ -30,20 +33,20 @@ router.post("/user", function (req, res) {
     verificationCode: randomIntFromInterval(1000, 9999),
     password: req.body.password,
   });
-  //Save in DB
+  // <---USER SAVED IN DATABASE--->
   user
     .save(user)
     .then((data) => {
       const user_id = data.id;
       // req.session.id = user_id;
-
+      // <---MAIL CONFIGURATION THAT TO BE SEND--->
       const mailOptions = {
         from: "tilddforme@gmail.com",
         to: data.email,
         subject: "OTP FOR TILDD",
         text: data.verificationCode,
       };
-
+      // // <---SENDING MAIL TO THE USER WITH OTP--->
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
           console.log(error);
@@ -58,13 +61,13 @@ router.post("/user", function (req, res) {
     });
 });
 
-//Find a user
+// <---ROUTE FOR LOGIN THE USER--->
 router.post("/userLogin", function (req, res) {
   User.find({ email: req.body.email })
     .then((user) => {
       if (!user) {
         return res.status(404).send({
-          message: "User not found with id " + req.params.userid,
+          message: "User not found with email " + req.body.email,
         });
       }
       if (
@@ -85,6 +88,8 @@ router.post("/userLogin", function (req, res) {
       });
     });
 });
+
+// <---ROUTE TO VERIFY THE OTP OF THE USER--->
 router.post("/otpLogin", function (req, res) {
   User.find({ email: req.body.email })
     .then((user) => {
@@ -93,6 +98,7 @@ router.post("/otpLogin", function (req, res) {
           message: "User not found with email " + req.body.email,
         });
       }
+      // <---MARKING USER VERIFIED--->
       if (req.body.verificationCode == user[0].verificationCode) {
         User.findOneAndUpdate(
           { email: req.body.email },
@@ -139,8 +145,8 @@ router.put("/user", function (req, res) {
 });
 
 //Delete a user
-router.delete("/user/:id", function (req, res) {
-  User.findOneAndDelete({ userid: req.params.id })
+router.delete("/user", function (req, res) {
+  User.findOneAndDelete({ email: req.body.email })
     .then((user) => {
       if (!user) {
         return res.status(404).send({
@@ -151,7 +157,7 @@ router.delete("/user/:id", function (req, res) {
     })
     .catch((err) => {
       return res.status(500).send({
-        message: "Could not delete user with id " + req.params.userid,
+        message: "Could not delete user with email " + req.body.email,
       });
     });
 });
