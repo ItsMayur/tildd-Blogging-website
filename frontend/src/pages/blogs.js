@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { BlogMini } from "../components/BlogMini";
 import { Footer } from "../components/Footer";
+import Head from "next/head";
 
 const Page = () => {
   const [blogs, setBlogs] = useState([""]);
@@ -25,6 +26,10 @@ const Page = () => {
   useEffect(fetchBlogs, []);
   return (
     <div>
+      <Head>
+        <title>Blogs</title>
+      </Head>
+
       <Navbar />
       <main>
         <div className="space-y-4 my-2">

@@ -23,7 +23,6 @@ const transporter = nodemailer.createTransport({
 //Create a user
 router.post("/user", function (req, res) {
   //Create User Object
-  console.log(req.body);
   const user = new User({
     firstName: req.body.firstname,
     lastName: req.body.lastname,
@@ -54,6 +53,7 @@ router.post("/user", function (req, res) {
       res.status(200).send({ message: "SUCCESS" });
     })
     .catch((err) => {
+      console.log(err);
       res.status(500).send({ message: `Error creating user ${err.message}` });
     });
 });
@@ -67,8 +67,40 @@ router.post("/userLogin", function (req, res) {
           message: "User not found with id " + req.params.userid,
         });
       }
-      if (req.body.password == user[0].password) {
+      if (
+        req.body.password == user[0].password &&
+        user[0].verificationCode == "VERIFIED"
+      ) {
         res.send({ message: "SUCCESS" }).status(200);
+      } else if (
+        req.body.password == user[0].password &&
+        user[0].verificationCode != "VERIFIED"
+      ) {
+        res.send({ message: "NOT VERIFIED" }).status(200);
+      }
+    })
+    .catch((err) => {
+      return res.status(500).send({
+        message: `Error retrieving user : ${err.message}`,
+      });
+    });
+});
+router.post("/otpLogin", function (req, res) {
+  User.find({ email: req.body.email })
+    .then((user) => {
+      if (!user) {
+        return res.status(404).send({
+          message: "User not found with email " + req.body.email,
+        });
+      }
+      if (req.body.verificationCode == user[0].verificationCode) {
+        User.findOneAndUpdate(
+          { email: req.body.email },
+          {
+            verificationCode: "VERIFIED",
+          },
+          { new: true }
+        ).then(res.send({ message: "SUCCESS" }).status(200));
       }
     })
     .catch((err) => {

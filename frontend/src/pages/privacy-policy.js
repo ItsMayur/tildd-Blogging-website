@@ -2,10 +2,15 @@ import React from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Privacy Policy</title>
+      </Head>
+
       <header>
         <Navbar />
       </header>

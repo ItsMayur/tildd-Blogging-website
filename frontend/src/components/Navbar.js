@@ -44,10 +44,14 @@ export const Navbar = () => {
         </div>
 
         <div className="flex mx-5 items-center justify-center">
-          {/* <ul className="flex space-x-5 items-center">
-            <li className="featured-btns text-purple">SIGN IN</li>
-            <li className="featured-btns text-purple">SIGN UP</li>
-          </ul> */}
+          <ul className="flex space-x-5 items-center max-md:hidden">
+            <li className="featured-btns text-purple">
+              <Link href="/signin">SIGN IN</Link>
+            </li>
+            <li className="featured-btns text-purple">
+              <Link href="/signup">SIGN UP</Link>
+            </li>
+          </ul>
           <ul
             className="space-y-1 hidden max-md:block"
             onClick={toggleHamburger}
@@ -93,6 +97,12 @@ export const Navbar = () => {
           {/* <li>
               <a href="/work-with-us">Work with us</a>
             </li> */}
+          {/* <li>
+            <ul className="flex space-x-5 items-center max-md:hidden">
+              <li className="featured-btns text-purple">SIGN IN</li>
+              <li className="featured-btns text-purple">SIGN UP</li>
+            </ul>
+          </li> */}
         </ul>
       </div>
       <div>{/* TO CREATE CATOGORIES */}</div>

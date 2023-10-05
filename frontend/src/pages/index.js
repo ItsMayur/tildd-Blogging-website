@@ -5,6 +5,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { BlogMini } from "@/components/BlogMini";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function Home() {
   const [blogs, setBlogs] = useState([""]);
@@ -35,6 +36,9 @@ export default function Home() {
   };
   return (
     <>
+      <Head>
+        <title>tildd-Enabling Dreams, Fueling Ambitions</title>
+      </Head>
       <Script src="https://apis.google.com/js/platform.js" async defer></Script>
       {/* GTAGS FOR GOOGLE ANALITICS */}
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-PXP5FGPPF6" />

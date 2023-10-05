@@ -4,10 +4,15 @@ import { Footer } from "../components/Footer";
 import TeamCard from "../components/TeamCard";
 import ContactCard from "../components/ContactCard";
 import Image from "next/image";
+import Head from "next/head";
 
 const page = () => {
   return (
     <div>
+      <Head>
+        <title>About</title>
+      </Head>
+
       <Navbar />
       <main>
         <div className="flex items-center max-md:h-auto py-10 px-2 justify-center space-x-5 max-md:flex-col">
