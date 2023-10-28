@@ -51,14 +51,14 @@ export default function page() {
                             Whether a developer is at the starting phase of
                             their web development journey or has some experience
                             with some good frontend projects, the major question
-                            that sticks in their mind is, 'Are they following
-                            the right path or roadmap that will land them in
-                            their dream company?' Though there are tons of
-                            frameworks and libraries available on the web,
-                            making it a little bit confusing for new developers
-                            to choose which stack or technology they should
-                            learn first, the ideal roadmap that they should
-                            follow, even though there are many web stacks
+                            that sticks in their mind is, &apos;Are they
+                            following the right path or roadmap that will land
+                            them in their dream company?&apos; Though there are
+                            tons of frameworks and libraries available on the
+                            web, making it a little bit confusing for new
+                            developers to choose which stack or technology they
+                            should learn first, the ideal roadmap that they
+                            should follow, even though there are many web stacks
                             available in the industry, but the basics will work
                             fine in each of them.
                           </p>
@@ -127,14 +127,14 @@ export default function page() {
                                 </strong>{" "}
                                 Would you like a cake with a basic structure, no
                                 topping, no decorations? No one wants a thing
-                                that doesn't have any decoration in it, which is
-                                why CSS came into play. Through HTML, you can
-                                plan a basic structure of a webpage, but when it
-                                comes to adding colors, animations, and effects
-                                to the page, CSS plays an important role. I
-                                would prefer to learn the basics of CSS and move
-                                to the next part, and you can learn more
-                                according to your needs.
+                                that doesn&apos;t have any decoration in it,
+                                which is why CSS came into play. Through HTML,
+                                you can plan a basic structure of a webpage, but
+                                when it comes to adding colors, animations, and
+                                effects to the page, CSS plays an important
+                                role. I would prefer to learn the basics of CSS
+                                and move to the next part, and you can learn
+                                more according to your needs.
                               </p>
                             </div>
                           </li>
@@ -150,10 +150,10 @@ export default function page() {
                                 design. For me, it was Instagram a couple of
                                 years ago. Though this is not necessary, but
                                 mugging is not a good method to learn things
-                                when you don't know how to apply them in real
-                                life. If you're still connected with us, then
-                                don't forget to share your first project with us
-                                by tagging our social handles.
+                                when you don&apos;t know how to apply them in
+                                real life. If you&apos;re still connected with
+                                us, then don&apos;t forget to share your first
+                                project with us by tagging our social handles.
                               </p>
                             </div>
                           </li>
@@ -166,14 +166,14 @@ export default function page() {
                                 JavaScript is a programming language that helps
                                 a web developer add interactivity to web pages.
                                 Even if you have made a webpage, it is useless
-                                if it doesn't do necessary work after a click.
-                                Writing your functions to do jobs that users
-                                require, manipulating the DOM, and interacting
-                                with backend servers through Fetch API and Ajax
-                                are common things that JavaScript is used for in
-                                a webpage. You can get more out of it according
-                                to your needs. The major topics I will recommend
-                                are:
+                                if it doesn&apos;t do necessary work after a
+                                click. Writing your functions to do jobs that
+                                users require, manipulating the DOM, and
+                                interacting with backend servers through Fetch
+                                API and Ajax are common things that JavaScript
+                                is used for in a webpage. You can get more out
+                                of it according to your needs. The major topics
+                                I will recommend are:
                               </p>
                             </div>
                           </li>
@@ -213,8 +213,8 @@ export default function page() {
                                 help you in the development of the product
                                 efficiently and easily. You will have many
                                 options here; you can go with React JS, Angular
-                                JS, Vue JS, or any other trending one. It's up
-                                to you to do your research and pick the right
+                                JS, Vue JS, or any other trending one. It&apos;s
+                                up to you to do your research and pick the right
                                 one, but if you are still confused, pick React
                                 JS, as its industry is growing drastically.
                               </p>
@@ -231,11 +231,11 @@ export default function page() {
                                   Writing CSS:
                                 </strong>
                                 Learn CSS libraries like Tailwind, Bootstrap,
-                                and Radix UI to use prewritten CSS, so you don't
-                                have to write those thousand-line code in your
-                                CSS file. These are just optional and will
-                                reduce your work, helping you design your
-                                webpage faster.
+                                and Radix UI to use prewritten CSS, so you
+                                don&apos;t have to write those thousand-line
+                                code in your CSS file. These are just optional
+                                and will reduce your work, helping you design
+                                your webpage faster.
                               </p>
                             </div>
                           </li>
@@ -254,7 +254,7 @@ export default function page() {
                                 online. It is easy with basic HTML, CSS, and
                                 JavaScript. But when you are with frameworks
                                 like React, it is not recommended to push your
-                                development build online; that's why we use
+                                development build online; that&apos;s why we use
                                 module bundlers, task runners to make a
                                 production build, which is the compressed and
                                 optimal version of the original one.
@@ -276,7 +276,7 @@ export default function page() {
                                 topics like authentication, Server-Side
                                 Rendering, Progressive Web Apps, or switch to
                                 mobile JS frameworks like Flutter, React Native,
-                                to get a new tool in your hand."
+                                to get a new tool in your hand.
                               </p>
                             </div>
                           </li>
@@ -289,14 +289,14 @@ export default function page() {
                         </div>
                         <div>
                           <p>
-                            In conclusion, a frontend web developer's journey
-                            begins with understanding the fundamental concepts
-                            of the internet, including HTTP, client-server
-                            communication, domain, hosting, and the role of
-                            browser. Mastering HTML and CSS builds the base for
-                            structuring and beautifying webpages. A practical
-                            approach is to clone an existing websites to apply
-                            the knowledge. JavaScript is essential for
+                            In conclusion, a frontend web developer&apos;s
+                            journey begins with understanding the fundamental
+                            concepts of the internet, including HTTP,
+                            client-server communication, domain, hosting, and
+                            the role of browser. Mastering HTML and CSS builds
+                            the base for structuring and beautifying webpages. A
+                            practical approach is to clone an existing websites
+                            to apply the knowledge. JavaScript is essential for
                             interactivity, DOM manipulation, and server
                             interactions. Learning Git&GitHub, coupled with a
                             mini-game project, strengthens skills. Advancing

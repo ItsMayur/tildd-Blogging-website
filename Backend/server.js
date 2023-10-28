@@ -5,6 +5,7 @@ const Authentication = require("./Routes/Authentication");
 const Blogs = require("./Routes/Blogs");
 var session = require("express-session");
 const cors = require("cors");
+const dotenv = require("dotenv").config();
 
 // <---CONSTANTS USED IN SERVER--->
 const PORT = 5000;
@@ -22,7 +23,7 @@ app.use(
 // <---EXPRESS SESSIONS SETTINGS--->
 app.use(
   session({
-    secret: "keyboard cat",
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: { secure: true },
@@ -36,8 +37,7 @@ app.use(express.json());
 // <---CONNECTING TO MONGODB DATABASE USING MONGOOSE--->
 mongoose.Promise = global.Promise;
 mongoose
-  // .connect("mongodb+srv://tildd:tilddforme@tildd.l38tszj.mongodb.net/", {
-  .connect("mongodb://127.0.0.1:27017/tildd", {
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
   })
   .then(() => {

@@ -88,10 +88,11 @@ export default function Home() {
           <div id="RightHome">
             <div className="bg-black">
               <Image
-                src=""
-                alt=""
+                src="/img/about-img.png"
+                alt="tildd"
                 srcset=""
-                className=" "
+                id="AboutLogo"
+                className=""
                 width="310"
                 height="310"
               />
